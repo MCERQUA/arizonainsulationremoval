@@ -1,0 +1,204 @@
+{
+  "site": {
+    "name": "{{BUSINESS_NAME}}",
+    "tagline": "{{TAGLINE}}",
+    "description": "{{DESCRIPTION}}",
+    "url": "{{DOMAIN}}",
+    "email": "{{EMAIL}}",
+    "phone": "{{PHONE}}",
+    "address": {
+      "street": "{{ADDRESS}}",
+      "city": "{{CITY}}",
+      "state": "{{STATE}}",
+      "zip": "{{ZIP}}",
+      "country": "United States"
+    },
+    "hours": "{{BUSINESS_HOURS}}",
+    "npn": "{{NPN}}",
+    "established": "{{YEAR_ESTABLISHED}}"
+  },
+
+  "branding": {
+    "logo": "/images/logos/logo.svg",
+    "favicon": "/favicon.svg",
+    "colors": {
+      "primary": "{{PRIMARY_COLOR}}",
+      "secondary": "{{SECONDARY_COLOR}}",
+      "accent": "{{ACCENT_COLOR}}"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Inter"
+    }
+  },
+
+  "hero": {
+    "headline": "{{HERO_HEADLINE}}",
+    "subheadline": "{{HERO_SUBHEADLINE}}",
+    "ctaText": "{{HERO_CTA}}",
+    "ctaLink": "#contact-form",
+    "image": "/images/hero/hero.jpg",
+    "imageAlt": "{{HERO_IMAGE_ALT}}",
+    "trustSignals": [
+      "{{TRUST_SIGNAL_1}}",
+      "{{TRUST_SIGNAL_2}}",
+      "{{TRUST_SIGNAL_3}}"
+    ]
+  },
+
+  "seo": {
+    "title": "{{SEO_TITLE}}",
+    "description": "{{SEO_DESCRIPTION}}",
+    "keywords": ["{{KEYWORD_1}}", "{{KEYWORD_2}}", "{{KEYWORD_3}}"],
+    "ogImage": "/images/og-image.jpg",
+    "twitterHandle": "{{TWITTER_HANDLE}}",
+    "schema": {
+      "type": "{{SCHEMA_TYPE}}",
+      "additionalTypes": ["{{ADDITIONAL_TYPE}}"],
+      "priceRange": "{{PRICE_RANGE}}"
+    }
+  },
+
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "About", "href": "/about" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+
+  "services": [
+    {
+      "id": "service-1",
+      "name": "{{SERVICE_1_NAME}}",
+      "description": "{{SERVICE_1_DESCRIPTION}}",
+      "icon": "shield",
+      "image": "/images/services/service-1.jpg",
+      "features": [
+        "{{SERVICE_1_FEATURE_1}}",
+        "{{SERVICE_1_FEATURE_2}}",
+        "{{SERVICE_1_FEATURE_3}}"
+      ],
+      "coverage": "{{SERVICE_1_COVERAGE}}",
+      "link": "/services#service-1"
+    },
+    {
+      "id": "service-2",
+      "name": "{{SERVICE_2_NAME}}",
+      "description": "{{SERVICE_2_DESCRIPTION}}",
+      "icon": "wrench",
+      "image": "/images/services/service-2.jpg",
+      "features": [
+        "{{SERVICE_2_FEATURE_1}}",
+        "{{SERVICE_2_FEATURE_2}}",
+        "{{SERVICE_2_FEATURE_3}}"
+      ],
+      "coverage": "{{SERVICE_2_COVERAGE}}",
+      "link": "/services#service-2"
+    },
+    {
+      "id": "service-3",
+      "name": "{{SERVICE_3_NAME}}",
+      "description": "{{SERVICE_3_DESCRIPTION}}",
+      "icon": "truck",
+      "image": "/images/services/service-3.jpg",
+      "features": [
+        "{{SERVICE_3_FEATURE_1}}",
+        "{{SERVICE_3_FEATURE_2}}",
+        "{{SERVICE_3_FEATURE_3}}"
+      ],
+      "coverage": "{{SERVICE_3_COVERAGE}}",
+      "link": "/services#service-3"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "{{FAQ_1_QUESTION}}",
+      "answer": "{{FAQ_1_ANSWER}}"
+    },
+    {
+      "question": "{{FAQ_2_QUESTION}}",
+      "answer": "{{FAQ_2_ANSWER}}"
+    },
+    {
+      "question": "{{FAQ_3_QUESTION}}",
+      "answer": "{{FAQ_3_ANSWER}}"
+    },
+    {
+      "question": "{{FAQ_4_QUESTION}}",
+      "answer": "{{FAQ_4_ANSWER}}"
+    },
+    {
+      "question": "{{FAQ_5_QUESTION}}",
+      "answer": "{{FAQ_5_ANSWER}}"
+    }
+  ],
+
+  "whyChooseUs": [
+    {
+      "title": "{{WHY_US_1_TITLE}}",
+      "description": "{{WHY_US_1_DESCRIPTION}}",
+      "icon": "star"
+    },
+    {
+      "title": "{{WHY_US_2_TITLE}}",
+      "description": "{{WHY_US_2_DESCRIPTION}}",
+      "icon": "shield-check"
+    },
+    {
+      "title": "{{WHY_US_3_TITLE}}",
+      "description": "{{WHY_US_3_DESCRIPTION}}",
+      "icon": "users"
+    }
+  ],
+
+  "about": {
+    "headline": "{{ABOUT_HEADLINE}}",
+    "description": "{{ABOUT_DESCRIPTION}}",
+    "mission": "{{ABOUT_MISSION}}",
+    "experience": "{{YEARS_EXPERIENCE}}",
+    "image": "/images/about/team.jpg"
+  },
+
+  "stats": [
+    {
+      "value": "{{STAT_1_VALUE}}",
+      "label": "{{STAT_1_LABEL}}",
+      "suffix": "{{STAT_1_SUFFIX}}"
+    },
+    {
+      "value": "{{STAT_2_VALUE}}",
+      "label": "{{STAT_2_LABEL}}",
+      "suffix": "{{STAT_2_SUFFIX}}"
+    },
+    {
+      "value": "{{STAT_3_VALUE}}",
+      "label": "{{STAT_3_LABEL}}",
+      "suffix": "{{STAT_3_SUFFIX}}"
+    }
+  ],
+
+  "footer": {
+    "companyInfo": "{{COMPANY_INFO}}",
+    "disclaimer": "{{DISCLAIMER}}",
+    "socialMedia": {
+      "facebook": "{{FACEBOOK_URL}}",
+      "twitter": "{{TWITTER_URL}}",
+      "linkedin": "{{LINKEDIN_URL}}",
+      "instagram": "{{INSTAGRAM_URL}}"
+    },
+    "legal": {
+      "privacy": "/privacy",
+      "terms": "/terms"
+    }
+  },
+
+  "contactForm": {
+    "headline": "{{CONTACT_FORM_HEADLINE}}",
+    "subheadline": "{{CONTACT_FORM_SUBHEADLINE}}",
+    "submitText": "{{CONTACT_FORM_SUBMIT}}",
+    "successMessage": "{{CONTACT_FORM_SUCCESS}}",
+    "netlifyFormName": "contact"
+  }
+}

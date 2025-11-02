@@ -1,0 +1,108 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import GlassCard from '@components/ui/GlassCard.tsx';
+import GlassButton from '@components/ui/GlassButton.tsx';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => 
+  new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+---
+
+<BaseLayout title="Crane Insurance Blog | Expert Insights & Industry Updates">
+  <div class="min-h-screen pt-32 pb-16 bg-gradient-to-b from-charcoal/90 to-dark-steel">
+    <div class="container-padding max-w-7xl mx-auto">
+      <!-- Page Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-bold text-construction-yellow mb-6" 
+            style="text-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)">
+          Industry Insights
+        </h1>
+        <p class="text-xl text-aluminum/80 max-w-3xl mx-auto"
+           style="text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8)">
+          Expert guidance on crane insurance, compliance, and industry best practices
+        </p>
+      </div>
+      
+      <!-- Blog Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sortedPosts.map((post) => (
+          <article class="group">
+            <div class="bg-dark-steel/80 backdrop-blur-md rounded-3xl p-8 border border-construction-yellow/30 hover:border-construction-yellow/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div class="space-y-6">
+                {post.data.image ? (
+                  <img 
+                    src={post.data.image} 
+                    alt={post.data.imageAlt || post.data.title}
+                    class="aspect-video w-full object-cover rounded-2xl"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="aspect-video bg-gradient-to-br from-construction-yellow/20 to-charcoal/20 rounded-2xl flex items-center justify-center border border-construction-yellow/20">
+                    <svg class="w-16 h-16 text-construction-yellow/50" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                )}
+                
+                <div class="space-y-4">
+                  <div class="flex items-center gap-4 text-sm text-aluminum/60">
+                    <time datetime={post.data.pubDate.toISOString()}>
+                      {new Date(post.data.pubDate).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                      })}
+                    </time>
+                    <span class="text-construction-yellow">•</span>
+                    <span>{post.data.readTime || '5 min read'}</span>
+                  </div>
+                  
+                  <h2 class="text-2xl font-bold text-construction-yellow group-hover:text-construction-yellow/90 transition-colors">
+                    {post.data.title}
+                  </h2>
+                  
+                  <p class="text-aluminum/80 leading-relaxed">
+                    {post.data.description}
+                  </p>
+                  
+                  {post.data.tags && (
+                    <div class="flex flex-wrap gap-2">
+                      {post.data.tags.map((tag: string) => (
+                        <span class="text-xs px-3 py-1 bg-construction-yellow/10 border border-construction-yellow/30 rounded-full text-construction-yellow">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                
+                <a
+                  href={`/blog/${post.slug}`}
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-construction-yellow hover:bg-construction-yellow/90 text-dark-steel font-bold rounded-xl transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  Read Article
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      
+      {sortedPosts.length === 0 && (
+        <div class="text-center py-20">
+          <div class="bg-dark-steel/60 backdrop-blur-md rounded-3xl p-12 border border-construction-yellow/30">
+            <p class="text-xl text-aluminum/80">
+              Expert insights coming soon! Check back for industry updates and crane insurance guidance.
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</BaseLayout>

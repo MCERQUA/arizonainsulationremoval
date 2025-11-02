@@ -1,0 +1,189 @@
+---
+import TrustBadgeProfessional from '../ui/TrustBadgeProfessional.astro';
+import GlassCard from '../ui/GlassCard.tsx';
+
+const reasons = [
+  {
+    icon: '🏆',
+    title: 'A+ Rated Carrier Partners',
+    description: 'We exclusively partner with A.M. Best "A" rated carriers ensuring financial stability and claims payment reliability when you need it most.'
+  },
+  {
+    icon: '📅',
+    title: '20 Years Industry Experience',
+    description: 'Since 2005, we\'ve specialized in crane insurance, understanding the unique risks and requirements of lifting operations across all sectors.'
+  },
+  {
+    icon: '🇺🇸',
+    title: 'Licensed in All 50 States',
+    description: 'National Producer Number #8608479 - Full licensing and compliance across the United States for seamless multi-state operations.'
+  },
+  {
+    icon: '⚡',
+    title: 'Fast Quote Turnaround',
+    description: 'Same-day quotes for standard operations, 24-48 hours for complex risks. Get coverage when you need it without delays.'
+  },
+  {
+    icon: '👥',
+    title: 'Dedicated Account Management',
+    description: 'Personal service from crane insurance specialists who understand your business, not call center representatives.'
+  },
+  {
+    icon: '🛡️',
+    title: 'Claims Advocacy Support',
+    description: 'We fight for you during claims, ensuring fair treatment and maximum recovery to get your equipment back in operation quickly.'
+  }
+];
+
+const carrierFeatures = [
+  'Financial Strength Rating: A+ (Superior)',
+  'Claims Payment History: 99.8% within 30 days',
+  'Nuclear Verdict Protection: Up to $50M excess',
+  'Specialized Crane Claims Adjusters',
+  'Direct Billing Available',
+  'Multi-State Operations Support'
+];
+---
+
+<section class="section-padding bg-gradient-to-br from-aluminum via-white to-aluminum" id="why-choose-us">
+  <div class="container-padding max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="heading-lg text-steel-black mb-4">
+        Why Industry Leaders Choose 
+        <span class="text-construction-yellow">Heavy Crane Insurance</span>
+      </h2>
+      <p class="body-text text-iron-gray max-w-3xl mx-auto">
+        When crane accidents average $2.5 million in settlements and can exceed $860 million in nuclear verdicts, 
+        you need more than just coverage—you need a specialized partner who understands crane operations.
+      </p>
+    </div>
+
+    <!-- Trust Badges Row -->
+    <div class="flex flex-wrap justify-center gap-4 mb-16">
+      <TrustBadgeProfessional type="carrier" />
+      <TrustBadgeProfessional type="experience" />
+      <TrustBadgeProfessional type="coverage" />
+      <TrustBadgeProfessional type="licensed" />
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+      <!-- Left Column - Key Differentiators -->
+      <div>
+        <h3 class="text-2xl font-bold text-steel-black mb-8">
+          Our Competitive Advantages
+        </h3>
+        <div class="space-y-6">
+          {reasons.map((reason) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-construction-yellow/20 rounded-xl flex items-center justify-center text-2xl">
+                {reason.icon}
+              </div>
+              <div>
+                <h4 class="font-bold text-steel-black mb-1">{reason.title}</h4>
+                <p class="text-iron-gray text-sm">{reason.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right Column - Carrier Strength -->
+      <div>
+        <div class="bg-gradient-to-br from-construction-yellow/10 to-construction-yellow/5 rounded-3xl p-8 h-full">
+          <h3 class="text-2xl font-bold text-steel-black mb-8">
+            Carrier Strength & Stability
+          </h3>
+          
+          <!-- Carrier Rating Display -->
+          <div class="bg-white rounded-2xl p-6 mb-6 shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="text-4xl font-bold text-construction-yellow">A+</div>
+              <div>
+                <div class="font-bold text-steel-black">Superior Rating</div>
+                <div class="text-sm text-iron-gray">A.M. Best Financial Strength</div>
+              </div>
+            </div>
+            <p class="text-sm text-iron-gray">
+              Our carrier partners maintain the highest financial ratings, ensuring they have the resources 
+              to pay claims promptly and fully, even for catastrophic losses.
+            </p>
+          </div>
+
+          <!-- Carrier Features List -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-steel-black mb-4">What This Means for You:</h4>
+            {carrierFeatures.map((feature) => (
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-sm text-iron-gray">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA Section -->
+    <div class="bg-steel-black rounded-3xl p-8 md:p-12 text-center">
+      <h3 class="text-2xl md:text-3xl font-bold text-aluminum mb-4">
+        Experience the Difference of Specialized Crane Insurance
+      </h3>
+      <p class="text-aluminum/80 mb-8 max-w-2xl mx-auto">
+        Join thousands of crane operators, rental companies, and contractors who trust us with their 
+        most critical risk management needs. Get a quote tailored to your specific operations today.
+      </p>
+      
+      <!-- Stats Row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+        <div>
+          <div class="text-3xl font-bold text-construction-yellow">$10M+</div>
+          <div class="text-sm text-aluminum/70">Coverage Limits</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-construction-yellow">50</div>
+          <div class="text-sm text-aluminum/70">States Licensed</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-construction-yellow">24hr</div>
+          <div class="text-sm text-aluminum/70">Quote Response</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-construction-yellow">99.8%</div>
+          <div class="text-sm text-aluminum/70">Claims Paid</div>
+        </div>
+      </div>
+      
+      <a 
+        href="#contact-form"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-construction-yellow text-steel-black font-bold rounded-xl hover:bg-yellow-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+      >
+        Get Your Custom Quote
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  section > div > * {
+    animation: fadeIn 0.6s ease-out;
+  }
+</style>

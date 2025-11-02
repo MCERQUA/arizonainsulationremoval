@@ -1,0 +1,81 @@
+---
+// Import components with proper paths
+import GlassButton from '../ui/GlassButton.tsx';
+import LogoScroller from '../ui/LogoScroller.tsx';
+import TrustBadgeProfessional from '../ui/TrustBadgeProfessional.astro';
+
+// Import site configuration
+import siteConfig from '@/data/site-config.json';
+
+const { hero, branding } = siteConfig;
+---
+
+<section
+  class="relative min-h-screen flex items-center overflow-hidden"
+>
+  <!-- Static Hero Background -->
+  <!-- Background with hero image and overlay -->
+  <div class="absolute inset-0 z-0">
+    <!-- Hero background image from config -->
+    <img
+      src={hero.image}
+      alt={hero.imageAlt}
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-br from-dark-steel/80 via-charcoal-black/70 to-machinery-gray/80"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full px-6 md:px-12 lg:px-16 pb-32 pt-32 md:pt-40">
+    <div class="max-w-7xl mx-auto">
+      <div class="animate-fade-in max-w-xl lg:max-w-2xl">
+        <!-- Headline from config -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-aluminum" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+          {hero.headline}
+        </h1>
+
+        <!-- Subheadline from config -->
+        <p class="text-lg sm:text-xl lg:text-2xl text-aluminum/90 mb-8 max-w-lg font-medium" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+          {hero.subheadline}
+        </p>
+
+        <!-- Trust Badges from config -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          {hero.trustSignals.map((signal) => (
+            <div class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+              <span class="text-aluminum font-medium text-sm">{signal}</span>
+            </div>
+          ))}
+        </div>
+
+        <!-- CTA from config -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <GlassButton
+            href={hero.ctaLink}
+            size="lg"
+            variant="primary"
+            client:load
+          >
+            {hero.ctaText}
+          </GlassButton>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative elements - using industrial tones -->
+    <div class="absolute top-1/4 -left-20 w-40 h-40 bg-construction-yellow/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/4 -right-20 w-60 h-60 bg-machinery-gray/10 rounded-full blur-3xl animate-float" style="animation-delay: 3s;"></div>
+  </div>
+
+  <!-- Logo Scroller -->
+  <LogoScroller client:visible />
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+    <div class="w-6 h-10 border-2 border-aluminum/30 rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-aluminum/50 rounded-full mt-2"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,490 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-concrete-gray text-steel-black;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E0E0E0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E2E2E;
+}
+
+/* Glass morphism with industrial tones */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(224, 224, 224, 0.85);
+  border: 1px solid rgba(117, 117, 117, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(26, 26, 26, 0.08);
+}
+
+.glass-warm {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(224, 224, 224, 0.90);
+  border: 1px solid rgba(117, 117, 117, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(26, 26, 26, 0.12);
+}
+
+.glass-dark {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced glass effect for navbar */
+.glass-navbar {
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  background: rgba(117, 117, 117, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Enhanced glass navbar with more depth */
+.glass-navbar-enhanced {
+  position: relative;
+  isolation: isolate;
+}
+
+.glass-navbar-enhanced::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile-first responsive utilities */
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+/* Elegant shadow effects */
+.shadow-elegant {
+  box-shadow: 0 10px 40px rgba(26, 26, 26, 0.1);
+}
+
+.shadow-elegant-hover {
+  transition: all 0.3s ease;
+}
+
+.shadow-elegant-hover:hover {
+  box-shadow: 0 15px 50px rgba(26, 26, 26, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Text shadow for readability */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-dark {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover effects */
+.button-hover {
+  @apply transition-all duration-300 ease-out;
+}
+
+.button-hover:hover {
+  @apply transform -translate-y-0.5;
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Enhanced Blog Content Styling */
+.blog-content {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  color: #8B7355; /* warm-gray */
+}
+
+/* Headings */
+.blog-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3E2723; /* espresso */
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #C8B89E; /* sand */
+  padding-bottom: 1rem;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #D2691E; /* terra-cotta */
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3E2723; /* espresso */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3E2723; /* espresso */
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraphs */
+.blog-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #8B7355; /* warm-gray */
+}
+
+/* Links */
+.blog-content a {
+  color: #D2691E; /* terra-cotta */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.blog-content a:hover {
+  color: #B8561A; /* darker terra-cotta */
+}
+
+/* Strong/Bold text */
+.blog-content strong, .blog-content b {
+  font-weight: 600;
+  color: #3E2723; /* espresso */
+}
+
+/* Lists */
+.blog-content ul, .blog-content ol {
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+.blog-content ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: #8B7355; /* warm-gray */
+  line-height: 1.6;
+}
+
+.blog-content ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #D2691E; /* terra-cotta */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.blog-content ol li {
+  counter-increment: list-counter;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+  color: #8B7355; /* warm-gray */
+  line-height: 1.6;
+}
+
+.blog-content ol {
+  counter-reset: list-counter;
+}
+
+.blog-content ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  width: 2rem;
+  height: 2rem;
+  background: #D2691E; /* terra-cotta */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+  border-left: 4px solid #D2691E; /* terra-cotta */
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 2rem 0;
+  background-color: rgba(250, 247, 242, 0.5); /* cream/50 */
+  font-style: italic;
+  color: #8B7355; /* warm-gray */
+}
+
+/* Code */
+.blog-content code {
+  background-color: #FAF7F2; /* cream */
+  color: #D2691E; /* terra-cotta */
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Horizontal rules */
+.blog-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #C8B89E, transparent); /* sand */
+  margin: 3rem 0;
+}
+
+/* Tables */
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid #C8B89E; /* sand */
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.blog-content th {
+  background-color: #FAF7F2; /* cream */
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #3E2723; /* espresso */
+}
+
+.blog-content td {
+  padding: 1rem;
+  border-top: 1px solid #C8B89E; /* sand */
+  color: #8B7355; /* warm-gray */
+}
+
+.blog-content tbody tr:nth-child(even) {
+  background-color: rgba(250, 247, 242, 0.3); /* cream/30 */
+}
+
+/* Quick Answer Boxes */
+.quick-answer {
+  @apply bg-gradient-to-r from-concrete-gray to-aluminum p-6 rounded-xl border-l-4 border-safety-orange my-8 shadow-md;
+}
+
+.quick-answer h2,
+.quick-answer h3 {
+  @apply text-steel-black mb-3 font-bold;
+}
+
+.quick-answer div[itemprop="text"] {
+  @apply text-iron-gray leading-relaxed;
+}
+
+/* Blog Feature Cards */
+.blog-feature-card {
+  @apply bg-white p-6 rounded-xl shadow-lg border border-steel-gray my-8;
+  transition: all 0.3s ease;
+}
+
+.blog-feature-card:hover {
+  @apply shadow-xl transform -translate-y-1;
+}
+
+/* Blog Highlight Box */
+.blog-highlight {
+  @apply bg-aluminum border-l-4 border-construction-yellow p-4 my-6 rounded-r-lg;
+}
+
+/* Blog Section Divider */
+.blog-divider {
+  @apply my-12 h-1 bg-gradient-to-r from-transparent via-concrete-gray to-transparent;
+}
+
+/* Numbered Lists with Circles */
+.blog-content ol {
+  counter-reset: list-counter;
+}
+
+.blog-content ol li {
+  counter-increment: list-counter;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.blog-content ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  width: 2rem;
+  height: 2rem;
+  background: #D2691E;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+/* Bullet Points with Custom Markers */
+.blog-content ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.blog-content ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #D2691E;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Enhanced Tables */
+.blog-content table {
+  @apply w-full my-8 shadow-md rounded-lg overflow-hidden;
+}
+
+.blog-content thead {
+  @apply bg-safety-orange text-white;
+}
+
+.blog-content tbody tr:nth-child(even) {
+  @apply bg-aluminum;
+}
+
+.blog-content tbody tr:hover {
+  @apply bg-concrete-gray/30;
+}
+
+/* Pull Quotes */
+.pull-quote {
+  @apply text-2xl font-light italic text-steel-black my-10 px-8 py-6 border-l-4 border-safety-orange bg-aluminum rounded-r-lg;
+  position: relative;
+}
+
+.pull-quote::before {
+  content: '"';
+  @apply text-6xl text-safety-orange/30 absolute -top-2 left-2;
+  font-family: Georgia, serif;
+}
+
+/* Info Boxes */
+.info-box {
+  @apply bg-gradient-to-br from-concrete-gray/20 to-aluminum p-6 rounded-xl my-8 border border-steel-gray;
+}
+
+.info-box-title {
+  @apply text-lg font-bold text-steel-black mb-3 flex items-center gap-2;
+}
+
+/* Key Points List */
+.key-points {
+  @apply bg-white p-6 rounded-xl shadow-md my-8 border-2 border-steel-gray;
+}
+
+.key-points-title {
+  @apply text-xl font-bold text-safety-orange mb-4 pb-2 border-b-2 border-concrete-gray;
+}
+
+.key-points li {
+  @apply py-2 border-b border-concrete-gray/30 last:border-0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-out;
+}
+
+/* Professional typography */
+.heading-xl {
+  @apply text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight;
+}
+
+.heading-lg {
+  @apply text-4xl sm:text-5xl font-bold leading-tight;
+}
+
+.heading-md {
+  @apply text-3xl sm:text-4xl font-semibold leading-snug;
+}
+
+.body-text {
+  @apply text-base sm:text-lg leading-relaxed;
+}
+
+/* Form styling */
+.form-input {
+  @apply w-full px-5 py-3 rounded-2xl bg-aluminum/50 backdrop-blur-sm 
+         border border-machinery-gray/20 text-steel-black placeholder-iron-gray
+         focus:outline-none focus:border-construction-yellow/50 focus:ring-2 
+         focus:ring-construction-yellow/20 transition-all duration-300;
+}
+
+/* Card styling */
+.card-elegant {
+  @apply bg-aluminum rounded-3xl shadow-soft hover:shadow-medium 
+         transition-all duration-300;
+}
