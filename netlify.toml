@@ -1,7 +1,15 @@
 [build]
   # Static HTML site - no build command needed
+  # Override any UI settings
   command = ""
   publish = "."
+  ignore = "git diff --quiet HEAD^ HEAD"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
 
 [[headers]]
   # Apply security headers to all pages
