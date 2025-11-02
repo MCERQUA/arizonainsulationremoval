@@ -7,7 +7,6 @@
   <meta name="description" content="Expert insulation removal and installation services across Arizona. Serving Phoenix, Tucson, Mesa, Chandler, and Scottsdale with professional, licensed contractors.">
   <meta name="keywords" content="insulation removal arizona, spray foam insulation, attic insulation removal, phoenix insulation contractor, arizona insulation services">
 
-  <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Arizona Insulation Removal | Professional Insulation Services">
   <meta property="og:description" content="Expert insulation removal and installation services across Arizona.">
   <meta property="og:type" content="website">
@@ -16,14 +15,19 @@
   <link rel="stylesheet" href="/styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <span class="logo-icon">🏠</span>
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <span class="logo-text">Arizona Insulation Removal</span>
       </div>
       <div class="nav-menu">
@@ -33,38 +37,88 @@
         <a href="#why-us">Why Choose Us</a>
         <a href="#contact" class="nav-cta">Get Free Quote</a>
       </div>
-      <div class="mobile-menu-toggle">☰</div>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-overlay"></div>
+    <div class="hero-background">
+      <div class="hero-gradient"></div>
+      <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+    </div>
+
     <div class="hero-content">
       <div class="container">
         <div class="hero-text">
-          <h1>Professional Insulation Removal & Installation in Arizona</h1>
-          <p class="hero-subtitle">Serving Phoenix, Tucson, Mesa, Chandler & Scottsdale with Expert Insulation Solutions</p>
+          <div class="hero-badge">Arizona's Premier Insulation Specialists</div>
+          <h1 class="hero-title">
+            <span class="title-line">Professional Insulation</span>
+            <span class="title-line">Removal & Installation</span>
+          </h1>
+          <p class="hero-subtitle">Serving Phoenix, Tucson, Mesa, Chandler & Scottsdale with cutting-edge insulation solutions that reduce energy costs by up to 50%</p>
+
           <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary btn-lg">Get Free Estimate</a>
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>Get Free Estimate</span>
+              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
             <a href="tel:+18449675247" class="btn btn-secondary btn-lg">
-              <span class="btn-icon">📞</span> 844-967-5247
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M22 16.92V19.92C22 20.4728 21.5523 20.9219 21 20.92C9.95 20.47 1.53 12.05 1.08 1C1.07829 0.447715 1.52728 0 2.08 0H5.08C5.63 0 6.08 0.45 6.08 1C6.08 2.68 6.35 4.31 6.87 5.82C7.02 6.24 6.87 6.71 6.52 6.97L4.89 8.27C6.4 11.23 8.76 13.59 11.72 15.1L13.02 13.47C13.28 13.12 13.75 12.97 14.17 13.12C15.68 13.64 17.31 13.91 18.99 13.91C19.54 13.91 19.99 14.36 19.99 14.91V16.92H22Z" fill="currentColor"/>
+              </svg>
+              <span>844-967-5247</span>
             </a>
           </div>
+
           <div class="hero-trust">
             <div class="trust-item">
-              <span class="trust-icon">✓</span>
+              <div class="trust-check"></div>
               <span>Licensed & Insured</span>
             </div>
             <div class="trust-item">
-              <span class="trust-icon">✓</span>
+              <div class="trust-check"></div>
               <span>20+ Years Experience</span>
             </div>
             <div class="trust-item">
-              <span class="trust-icon">✓</span>
+              <div class="trust-check"></div>
               <span>Free Inspections</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50%</div>
+          <div class="stat-label">Average Energy Savings</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9/5</div>
+          <div class="stat-label">Customer Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Emergency Service</div>
         </div>
       </div>
     </div>
@@ -74,49 +128,65 @@
   <section id="services" class="services-section">
     <div class="container">
       <div class="section-header">
-        <h2>Our Insulation Services</h2>
-        <p>Comprehensive insulation solutions for residential and commercial properties across Arizona</p>
+        <div class="section-badge">Our Services</div>
+        <h2>Comprehensive Insulation Solutions</h2>
+        <p>Professional services for residential and commercial properties across Arizona</p>
       </div>
 
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏗️</div>
+        <div class="service-card glass">
+          <div class="service-number">01</div>
           <h3>Insulation Removal</h3>
-          <p>Safe, complete removal of old, damaged, or contaminated insulation from attics, walls, and crawl spaces.</p>
+          <p>Safe, complete removal of old, damaged, or contaminated insulation from attics, walls, and crawl spaces with proper disposal and cleanup.</p>
           <ul class="service-features">
             <li>Complete extraction</li>
             <li>Contamination cleanup</li>
             <li>Damage assessment</li>
-            <li>Disposal included</li>
+            <li>Environmentally safe disposal</li>
           </ul>
-          <a href="/services/insulation-removal" class="service-link">Learn More →</a>
+          <a href="/services/insulation-removal" class="service-link">
+            <span>Learn More</span>
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
 
-        <div class="service-card featured">
+        <div class="service-card glass featured">
           <div class="featured-badge">Most Popular</div>
-          <div class="service-icon">🎯</div>
+          <div class="service-number">02</div>
           <h3>Spray Foam Insulation</h3>
-          <p>Premium closed-cell and open-cell spray foam installation for maximum energy efficiency and comfort.</p>
+          <p>Premium closed-cell and open-cell spray foam installation providing superior air sealing, moisture control, and maximum energy efficiency.</p>
           <ul class="service-features">
-            <li>Closed-cell foam</li>
-            <li>Open-cell foam</li>
-            <li>Air sealing</li>
+            <li>Closed-cell foam R-value 6-7 per inch</li>
+            <li>Open-cell foam R-value 3.5-4 per inch</li>
+            <li>Complete air sealing</li>
             <li>Energy savings up to 50%</li>
           </ul>
-          <a href="/services/spray-foam" class="service-link">Learn More →</a>
+          <a href="/services/spray-foam" class="service-link">
+            <span>Learn More</span>
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">📦</div>
+        <div class="service-card glass">
+          <div class="service-number">03</div>
           <h3>Blown-In Insulation</h3>
-          <p>Cost-effective blown-in cellulose and fiberglass insulation for attics and hard-to-reach areas.</p>
+          <p>Cost-effective blown-in cellulose and fiberglass insulation perfect for attics, walls, and hard-to-reach areas with quick, clean installation.</p>
           <ul class="service-features">
-            <li>Cellulose insulation</li>
-            <li>Fiberglass insulation</li>
-            <li>Attic upgrades</li>
-            <li>Quick installation</li>
+            <li>Cellulose insulation R-value 3.2-3.8</li>
+            <li>Fiberglass insulation R-value 2.2-4.3</li>
+            <li>Fast installation process</li>
+            <li>Excellent sound dampening</li>
           </ul>
-          <a href="/services/blown-in" class="service-link">Learn More →</a>
+          <a href="/services/blown-in" class="service-link">
+            <span>Learn More</span>
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -126,124 +196,146 @@
   <section id="process" class="process-section">
     <div class="container">
       <div class="section-header">
+        <div class="section-badge">How We Work</div>
         <h2>Our Simple 4-Step Process</h2>
         <p>From inspection to installation, we make insulation services easy</p>
       </div>
 
-      <div class="process-grid">
+      <div class="process-timeline">
         <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>Free Inspection</h3>
-          <p>We conduct a thorough inspection of your property to assess insulation needs and identify any issues.</p>
+          <div class="step-visual">
+            <div class="step-number">01</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content glass">
+            <h3>Free Inspection</h3>
+            <p>We conduct a thorough inspection of your property to assess insulation needs, identify issues, and measure R-values to determine the best solution.</p>
+          </div>
         </div>
 
         <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>Custom Quote</h3>
-          <p>Receive a detailed, transparent quote with no hidden fees. We explain all options and recommendations.</p>
+          <div class="step-visual">
+            <div class="step-number">02</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content glass">
+            <h3>Custom Quote</h3>
+            <p>Receive a detailed, transparent quote with no hidden fees. We explain all options, material choices, and projected energy savings.</p>
+          </div>
         </div>
 
         <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>Professional Installation</h3>
-          <p>Our certified technicians complete the work efficiently with minimal disruption to your home or business.</p>
+          <div class="step-visual">
+            <div class="step-number">03</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content glass">
+            <h3>Professional Installation</h3>
+            <p>Our certified technicians complete the work efficiently with minimal disruption. All work areas are protected and cleaned upon completion.</p>
+          </div>
         </div>
 
         <div class="process-step">
-          <div class="step-number">4</div>
-          <h3>Quality Guarantee</h3>
-          <p>Final inspection and walkthrough to ensure everything meets our high standards and your satisfaction.</p>
+          <div class="step-visual">
+            <div class="step-number">04</div>
+          </div>
+          <div class="step-content glass">
+            <h3>Quality Guarantee</h3>
+            <p>Final inspection and walkthrough to ensure everything meets our high standards. We provide documentation and care instructions.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Coverage Areas -->
+  <!-- Coverage Section -->
   <section id="coverage" class="coverage-section">
     <div class="container">
       <div class="section-header">
+        <div class="section-badge">Service Areas</div>
         <h2>Proudly Serving Arizona Communities</h2>
-        <p>Professional insulation services throughout the Greater Phoenix area</p>
+        <p>Professional insulation services throughout the Greater Phoenix area and beyond</p>
       </div>
 
       <div class="cities-grid">
-        <div class="city-card">
+        <div class="city-card glass">
           <h3>Phoenix</h3>
-          <p>Complete insulation services for Phoenix homes and businesses</p>
-          <a href="/phoenix">View Services →</a>
+          <p>Complete insulation services for Phoenix metro homes and commercial properties</p>
+          <a href="/phoenix" class="city-link">View Services</a>
         </div>
-        <div class="city-card">
+        <div class="city-card glass">
           <h3>Tucson</h3>
-          <p>Expert insulation removal and installation in Tucson</p>
-          <a href="/tucson">View Services →</a>
+          <p>Expert insulation removal and installation serving greater Tucson area</p>
+          <a href="/tucson" class="city-link">View Services</a>
         </div>
-        <div class="city-card">
+        <div class="city-card glass">
           <h3>Mesa</h3>
-          <p>Trusted insulation contractors serving Mesa residents</p>
-          <a href="/mesa">View Services →</a>
+          <p>Trusted insulation contractors serving Mesa residents and businesses</p>
+          <a href="/mesa" class="city-link">View Services</a>
         </div>
-        <div class="city-card">
+        <div class="city-card glass">
           <h3>Chandler</h3>
-          <p>Professional spray foam and insulation in Chandler</p>
-          <a href="/chandler">View Services →</a>
+          <p>Professional spray foam and blown-in insulation in Chandler</p>
+          <a href="/chandler" class="city-link">View Services</a>
         </div>
-        <div class="city-card">
+        <div class="city-card glass">
           <h3>Scottsdale</h3>
-          <p>Premium insulation services for Scottsdale properties</p>
-          <a href="/scottsdale">View Services →</a>
+          <p>Premium insulation services for Scottsdale luxury properties</p>
+          <a href="/scottsdale" class="city-link">View Services</a>
         </div>
-        <div class="city-card">
+        <div class="city-card glass">
           <h3>Glendale</h3>
-          <p>Comprehensive insulation solutions in Glendale</p>
-          <a href="/glendale">View Services →</a>
+          <p>Comprehensive insulation solutions throughout Glendale</p>
+          <a href="/glendale" class="city-link">View Services</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
+  <!-- Why Us Section -->
   <section id="why-us" class="why-us-section">
     <div class="container">
       <div class="section-header">
-        <h2>Why Choose Arizona Insulation Removal?</h2>
-        <p>Experience the difference of working with Arizona's top-rated insulation professionals</p>
+        <div class="section-badge">Why Choose Us</div>
+        <h2>Arizona's Most Trusted Insulation Experts</h2>
+        <p>Experience the difference of working with true professionals</p>
       </div>
 
       <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">🏆</div>
-          <h3>20+ Years Experience</h3>
-          <p>Decades of expertise in Arizona's unique climate and insulation needs</p>
+        <div class="benefit-card glass">
+          <div class="benefit-number">20+</div>
+          <h3>Years Experience</h3>
+          <p>Decades of expertise in Arizona's unique climate and insulation requirements</p>
         </div>
 
-        <div class="benefit-card">
-          <div class="benefit-icon">⚡</div>
-          <h3>Fast Response Time</h3>
-          <p>Same-day inspections available for urgent insulation issues</p>
+        <div class="benefit-card glass">
+          <div class="benefit-number">24/7</div>
+          <h3>Fast Response</h3>
+          <p>Same-day inspections available for urgent insulation issues and emergencies</p>
         </div>
 
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h3>Competitive Pricing</h3>
-          <p>Fair, transparent pricing with detailed quotes and no hidden fees</p>
+        <div class="benefit-card glass">
+          <div class="benefit-number">100%</div>
+          <h3>Satisfaction</h3>
+          <p>Complete satisfaction guarantee on all insulation work and materials</p>
         </div>
 
-        <div class="benefit-card">
-          <div class="benefit-icon">✅</div>
+        <div class="benefit-card glass">
+          <div class="benefit-number">5K+</div>
+          <h3>Happy Clients</h3>
+          <p>Thousands of satisfied customers across Arizona trust our services</p>
+        </div>
+
+        <div class="benefit-card glass">
+          <div class="benefit-number">50%</div>
+          <h3>Energy Savings</h3>
+          <p>Reduce cooling costs by up to 50% with proper insulation installation</p>
+        </div>
+
+        <div class="benefit-card glass">
+          <div class="benefit-number">A+</div>
           <h3>Licensed & Insured</h3>
           <p>Fully licensed contractors with comprehensive insurance coverage</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon">🌟</div>
-          <h3>Quality Guarantee</h3>
-          <p>100% satisfaction guarantee on all insulation work</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon">🌡️</div>
-          <h3>Energy Savings</h3>
-          <p>Reduce cooling costs by up to 50% with proper insulation</p>
         </div>
       </div>
     </div>
@@ -251,14 +343,23 @@
 
   <!-- CTA Banner -->
   <section class="cta-banner">
+    <div class="cta-background"></div>
     <div class="container">
-      <div class="cta-content">
+      <div class="cta-content glass">
         <h2>Ready to Improve Your Home's Comfort & Energy Efficiency?</h2>
-        <p>Get a free inspection and quote from Arizona's trusted insulation experts</p>
+        <p>Get a free inspection and quote from Arizona's trusted insulation experts. Start saving on energy costs today.</p>
         <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary btn-lg">Schedule Free Inspection</a>
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <span>Schedule Free Inspection</span>
+            <svg class="btn-arrow" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <a href="tel:+18449675247" class="btn btn-secondary-inverse btn-lg">
-            <span class="btn-icon">📞</span> 844-967-5247
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+              <path d="M22 16.92V19.92C22 20.4728 21.5523 20.9219 21 20.92C9.95 20.47 1.53 12.05 1.08 1C1.07829 0.447715 1.52728 0 2.08 0H5.08C5.63 0 6.08 0.45 6.08 1C6.08 2.68 6.35 4.31 6.87 5.82C7.02 6.24 6.87 6.71 6.52 6.97L4.89 8.27C6.4 11.23 8.76 13.59 11.72 15.1L13.02 13.47C13.28 13.12 13.75 12.97 14.17 13.12C15.68 13.64 17.31 13.91 18.99 13.91C19.54 13.91 19.99 14.36 19.99 14.91V16.92H22Z" fill="currentColor"/>
+            </svg>
+            <span>844-967-5247</span>
           </a>
         </div>
       </div>
@@ -274,55 +375,43 @@
           <p>Contact us today for a free inspection and detailed quote on your insulation project.</p>
 
           <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <div>
-                <h4>Phone</h4>
-                <a href="tel:+18449675247">844-967-5247</a>
-              </div>
+            <div class="contact-item glass">
+              <h4>Phone</h4>
+              <a href="tel:+18449675247">844-967-5247</a>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">✉️</div>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:josh@contractorschoiceagency.com">josh@contractorschoiceagency.com</a>
-              </div>
+            <div class="contact-item glass">
+              <h4>Email</h4>
+              <a href="mailto:josh@contractorschoiceagency.com">josh@contractorschoiceagency.com</a>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <h4>Office</h4>
-                <p>12220 E Riggs Rd<br>Chandler, AZ 85249</p>
-              </div>
+            <div class="contact-item glass">
+              <h4>Office</h4>
+              <p>12220 E Riggs Rd<br>Chandler, AZ 85249</p>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">🕐</div>
-              <div>
-                <h4>Hours</h4>
-                <p>Monday - Friday: 7am - 6pm<br>Saturday: 8am - 4pm</p>
-              </div>
+            <div class="contact-item glass">
+              <h4>Hours</h4>
+              <p>Monday - Friday: 7am - 6pm<br>Saturday: 8am - 4pm<br>Sunday: Emergency only</p>
             </div>
           </div>
         </div>
 
-        <div class="contact-form-wrapper">
+        <div class="contact-form-wrapper glass">
           <form class="contact-form" action="/api/contact" method="POST">
             <div class="form-group">
-              <label for="name">Full Name *</label>
+              <label for="name">Full Name</label>
               <input type="text" id="name" name="name" required>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email *</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone *</label>
+                <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" required>
               </div>
             </div>
@@ -344,9 +433,14 @@
               <textarea id="message" name="message" rows="5" placeholder="Tell us about your insulation project..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Request Free Quote</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              <span>Request Free Quote</span>
+              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
 
-            <p class="form-note">* Required fields. We respond to all inquiries within 24 hours.</p>
+            <p class="form-note">We respond to all inquiries within 24 hours</p>
           </form>
         </div>
       </div>
@@ -359,10 +453,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h3>Arizona Insulation Removal</h3>
-          <p>Professional insulation removal and installation services throughout Arizona since 2003.</p>
+          <p>Professional insulation removal and installation services throughout Arizona since 2003. Licensed, insured, and dedicated to excellence.</p>
           <div class="footer-contact">
-            <p><strong>Phone:</strong> <a href="tel:+18449675247">844-967-5247</a></p>
-            <p><strong>Email:</strong> <a href="mailto:josh@contractorschoiceagency.com">josh@contractorschoiceagency.com</a></p>
+            <p><a href="tel:+18449675247">844-967-5247</a></p>
+            <p><a href="mailto:josh@contractorschoiceagency.com">josh@contractorschoiceagency.com</a></p>
           </div>
         </div>
 
@@ -410,18 +504,56 @@
 
   <script>
     // Mobile menu toggle
-    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-menu').classList.toggle('active');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
 
-    // Smooth scroll for anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          navMenu.classList.remove('active');
+          menuToggle.classList.remove('active');
         }
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.service-card, .process-step, .city-card, .benefit-card').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Parallax shapes
+    document.addEventListener('mousemove', (e) => {
+      const shapes = document.querySelectorAll('.shape');
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      shapes.forEach((shape, index) => {
+        const speed = (index + 1) * 0.05;
+        const xMove = (x - 0.5) * 100 * speed;
+        const yMove = (y - 0.5) * 100 * speed;
+        shape.style.transform = `translate(${xMove}px, ${yMove}px)`;
       });
     });
   </script>
