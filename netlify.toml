@@ -1,12 +1,10 @@
 [build]
   # Static HTML site - no build command needed
-  # This explicitly overrides any UI settings
+  # Files are in root directory - no publish directory needed
   command = "echo 'Static site - no build needed'"
-  publish = "."
   ignore = "git diff --quiet HEAD^ HEAD"
 
 [build.environment]
-  # Ensure no build is attempted
   NODE_VERSION = "20"
 
 [[redirects]]
